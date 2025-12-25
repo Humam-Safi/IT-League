@@ -1,0 +1,5 @@
+/* Layout utility overrides for the new animated UI */
+#root {
+  max-width: none;
+  padding: 0;
+}

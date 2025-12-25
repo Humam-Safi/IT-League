@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+/* App theme tokens based on Logo */
+:root {
+  /* Exact match for the flat dark background of user logo */
+  --bg-logo: 34 37 42; /* #22252a */
+  --primary-blue: 59 130 246;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply antialiased text-slate-100;
+  background-color: rgb(var(--bg-logo));
+}
+
+
+/* Hide default scrollbar but keep scroll */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(59, 130, 246, 0.3) transparent;
+}
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+*::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 9999px;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
