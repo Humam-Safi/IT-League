@@ -1,1 +1,11 @@
-[]
+[
+  {
+    "id": "1",
+    "teamA": "DTC",
+    "teamB": "Freedom",
+    "teamALogo": "",
+    "teamBLogo": "",
+    "time": "12:00",
+    "date": "2026-1-17"
+  }
+]
