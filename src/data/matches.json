@@ -2,17 +2,111 @@
   {
     "id": "1",
     "teamA": "Venom",
-    "teamB": "Flashat",
-    "scoreA": 3,
+    "teamB": "Cyper Team",
+    "scoreA": 2,
+    "scoreB": 3,
+    "date": "2025-12-14",
+    "scorersA": [],
+    "scorersB": []
+  },
+  {
+    "id": "2",
+    "teamA": "Blanco",
+    "teamB": "Madrid IT Team",
+    "scoreA": 2,
     "scoreB": 2,
-    "date": "2025-12-20",
-    "scorersA": ["Ahmed (2)", "Khalid"],
-    "scorersB": ["Sami", "Omar"],
-    "cardsA": [
-      { "player": "Khalid", "type": "yellow" }
-    ],
-    "cardsB": [
-       { "player": "Omar", "type": "red" }
-    ]
+    "date": "2025-12-16",
+    "scorersA": [],
+    "scorersB": ["يزن حمدو (2)"]
+  },
+  {
+    "id": "3",
+    "teamA": "IT Lions",
+    "teamB": "Flashat",
+    "scoreA": 2,
+    "scoreB": 0,
+    "date": "2025-12-18",
+    "scorersA": ["عبد المنعم بترة", "ليث صطوف"],
+    "scorersB": []
+  },
+  {
+    "id": "4",
+    "teamA": "Cyper Team",
+    "teamB": "Flashat",
+    "scoreA": 0,
+    "scoreB": 0,
+    "date": "2025-12-21",
+    "scorersA": [],
+    "scorersB": []
+  },
+  {
+    "id": "5",
+    "teamA": "DTC",
+    "teamB": "Ummayah",
+    "scoreA": 1,
+    "scoreB": 1,
+    "date": "2025-12-22",
+    "scorersA": ["وسام عساف"],
+    "scorersB": ["عبد الرحمن حرفوش"]
+  },
+  {
+    "id": "6",
+    "teamA": "AL-Etihad",
+    "teamB": "Freedom",
+    "scoreA": 2,
+    "scoreB": 3,
+    "date": "2025-12-22",
+    "scorersA": ["", ""],
+    "scorersB": ["عمر ضيعي (2)", "غيث حواري"]
+  },
+  {
+    "id": "7",
+    "teamA": "Freedom",
+    "teamB": "Ummayah",
+    "scoreA": 4,
+    "scoreB": 5,
+    "date": "2025-12-31",
+    "scorersA": ["علاء أقرع (2)", "عز الدين المنجد", "فرحات العيد"],
+    "scorersB": ["أحمد عليان (3)", "عبد الرحمن حرفوش (2)"]
+  },
+  {
+    "id": "8",
+    "teamA": "AL-Etihad",
+    "teamB": "DTC",
+    "scoreA": 1,
+    "scoreB": 6,
+    "date": "2026-1-2",
+    "scorersA": ["ميار فندي"],
+    "scorersB": ["وسام عساف (4)", "محمد جناد", "حيدر موسى"]
+  },
+  {
+    "id": "9",
+    "teamA": "Blanco",
+    "teamB": "Tech Titans",
+    "scoreA": 1,
+    "scoreB": 3,
+    "date": "2025-12-25",
+    "scorersA": [],
+    "scorersB": []
+  },
+  {
+    "id": "10",
+    "teamA": "IT Lions",
+    "teamB": "Cyper Team",
+    "scoreA": 0,
+    "scoreB": 4,
+    "date": "2026-1-4",
+    "scorersA": [],
+    "scorersB": ["عبد الله بكور (2)", "فرحان الحاج يونس", "إيلياس إيلياس"]
+  },
+  {
+    "id": "11",
+    "teamA": "IT Lions",
+    "teamB": "Venom",
+    "scoreA": 5,
+    "scoreB": 2,
+    "date": "2026-1-7",
+    "scorersA": ["عبد الحسيب خولي (2)", "ليث صطوف", "عاطف جنيات", "حسام جنيات"],
+    "scorersB": ["حمزة أيوب", "معتصم ادريس"]
   }
 ]
