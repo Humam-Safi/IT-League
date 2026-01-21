@@ -5,8 +5,8 @@
     "teamB": "AL-Etihad",
     "teamALogo": "/teams/5.png",
     "teamBLogo": "/teams/6.jpg",
-    "time": "12:00",
-    "date": "2026-1-22"
+    "time": "",
+    "date": ""
   },
   {
     "id": "2",
@@ -14,8 +14,8 @@
     "teamB": "Flashat",
     "teamALogo": "/teams/1.jpg",
     "teamBLogo": "/teams/2.png",
-    "time": "14:00",
-    "date": "2026-1-23"
+    "time": "",
+    "date": ""
   },
   {
     "id": "3",
@@ -23,7 +23,7 @@
     "teamB": "Tech Titans",
     "teamALogo": "/teams/11.jpg",
     "teamBLogo": "/teams/10.jpg",
-    "time": "16:00",
-    "date": "2026-1-24"
+    "time": "",
+    "date": ""
   }
 ]
