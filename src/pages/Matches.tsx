@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import matchesData from "../data/matches.json";
+import nextMatchesData from "../data/next_matches.json";
 import teamsData from "../data/teams.json"; // Need logos/names
-import { Calendar, Trophy } from "lucide-react";
+import { Calendar, Trophy, Clock } from "lucide-react";
 
 // Helper to get team info by name or id - the matches.json uses names like "Venom"
 const getTeam = (teamName: string) => {
@@ -13,9 +14,7 @@ const getTeam = (teamName: string) => {
 };
 
 const Matches: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<"results" | "fixtures">(
-    "results",
-  );
+  const [activeTab, setActiveTab] = useState<"results" | "fixtures">("results");
 
   return (
     <div className="max-w-4xl mx-auto p-4 space-y-6">
@@ -46,8 +45,9 @@ const Matches: React.FC = () => {
       </div>
 
       <div className="space-y-4">
-          {activeTab === "results" ? <>
-            {matchesData.map((match) => (
+        {activeTab === "results" ? (
+          <>
+            {[...matchesData].reverse().map((match) => (
               <MatchCard key={match.id} match={match} />
             ))}
             {matchesData.length === 0 && (
@@ -55,66 +55,78 @@ const Matches: React.FC = () => {
                 No matches found.
               </div>
             )}
-          </> : <div className="h-[200px]"></div>}
+          </>
+        ) : (
+          <>
+            {nextMatchesData.map((match) => (
+              <NextMatchCard key={match.id} match={match} />
+            ))}
+            {nextMatchesData.length === 0 && (
+              <div className="text-center text-slate-500 py-10">
+                No upcoming matches scheduled.
+              </div>
+            )}
+          </>
+        )}
       </div>
     </div>
   );
 };
 
-// const NextMatchCard: React.FC<{ match: any }> = ({ match }) => {
-//   const teamA = getTeam(match.teamA);
-//   const teamB = getTeam(match.teamB);
+const NextMatchCard: React.FC<{ match: any }> = ({ match }) => {
+  const teamA = getTeam(match.teamA);
+  const teamB = getTeam(match.teamB);
 
-//   return (
-//     <motion.div
-//       initial={{ opacity: 0, y: 20 }}
-//       animate={{ opacity: 1, y: 0 }}
-//       className="bg-slate-800/50 backdrop-blur-md border border-white/5 rounded-2xl overflow-hidden shadow-xl"
-//     >
-//       {/* Date Header */}
-//       <div className="bg-slate-900/50 px-4 py-2 flex items-center justify-center gap-2 text-xs text-blue-300 font-mono tracking-wider uppercase border-b border-white/5">
-//         <Calendar size={14} />
-//         {match.date} <span className="text-slate-600">|</span>{" "}
-//         <Clock size={14} /> {match.time}
-//       </div>
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="bg-slate-800/50 backdrop-blur-md border border-white/5 rounded-2xl overflow-hidden shadow-xl"
+    >
+      {/* Date Header */}
+      <div className="bg-slate-900/50 px-4 py-2 flex items-center justify-center gap-2 text-xs text-blue-300 font-mono tracking-wider uppercase border-b border-white/5">
+        <Calendar size={14} />
+        {match.date} <span className="text-slate-600">|</span>{" "}
+        <Clock size={14} /> {match.time}
+      </div>
 
-//       <div className="p-4 md:p-6">
-//         <div className="flex flex-row items-center justify-between gap-1 md:gap-12">
-//           {/* Team A */}
-//           <div className="flex flex-col items-center flex-1 order-1">
-//             <img
-//               src={teamA?.logo || "/placeholder.png"}
-//               alt={match.teamA}
-//               className="w-12 h-12 md:w-24 md:h-24 object-contain drop-shadow-lg mb-2"
-//             />
-//             <h3 className="text-sm md:text-2xl font-bold text-white text-center leading-tight">
-//               {match.teamA}
-//             </h3>
-//           </div>
+      <div className="p-4 md:p-6">
+        <div className="flex flex-row items-center justify-between gap-1 md:gap-12">
+          {/* Team A */}
+          <div className="flex flex-col items-center flex-1 order-1">
+            <img
+              src={teamA?.logo || "/placeholder.png"}
+              alt={match.teamA}
+              className="w-12 h-12 md:w-24 md:h-24 object-contain drop-shadow-lg mb-2"
+            />
+            <h3 className="text-sm md:text-2xl font-bold text-white text-center leading-tight">
+              {match.teamA}
+            </h3>
+          </div>
 
-//           {/* VS */}
-//           <div className="flex flex-col items-center order-2 md:order-2 shrink-0">
-//             <div className="w-10 h-10 md:w-16 md:h-16 rounded-full bg-white/5 flex items-center justify-center text-sm md:text-xl font-black text-slate-400 border border-white/10">
-//               VS
-//             </div>
-//           </div>
+          {/* VS */}
+          <div className="flex flex-col items-center order-2 md:order-2 shrink-0">
+            <div className="w-10 h-10 md:w-16 md:h-16 rounded-full bg-white/5 flex items-center justify-center text-sm md:text-xl font-black text-slate-400 border border-white/10">
+              VS
+            </div>
+          </div>
 
-//           {/* Team B */}
-//           <div className="flex flex-col items-center flex-1 order-3">
-//             <img
-//               src={teamB?.logo || "/placeholder.png"}
-//               alt={match.teamB}
-//               className="w-12 h-12 md:w-24 md:h-24 object-contain drop-shadow-lg mb-2"
-//             />
-//             <h3 className="text-sm md:text-2xl font-bold text-white text-center leading-tight">
-//               {match.teamB}
-//             </h3>
-//           </div>
-//         </div>
-//       </div>
-//     </motion.div>
-//   );
-// };
+          {/* Team B */}
+          <div className="flex flex-col items-center flex-1 order-3">
+            <img
+              src={teamB?.logo || "/placeholder.png"}
+              alt={match.teamB}
+              className="w-12 h-12 md:w-24 md:h-24 object-contain drop-shadow-lg mb-2"
+            />
+            <h3 className="text-sm md:text-2xl font-bold text-white text-center leading-tight">
+              {match.teamB}
+            </h3>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+};
 
 const MatchCard: React.FC<{ match: any }> = ({ match }) => {
   const teamA = getTeam(match.teamA);

@@ -1,11 +1,29 @@
 [
   {
     "id": "1",
-    "teamA": "DTC",
-    "teamB": "Freedom",
-    "teamALogo": "",
-    "teamBLogo": "",
+    "teamA": "Ummayah",
+    "teamB": "AL-Etihad",
+    "teamALogo": "/teams/5.png",
+    "teamBLogo": "/teams/6.jpg",
     "time": "12:00",
-    "date": "2026-1-17"
+    "date": "2026-1-22"
+  },
+  {
+    "id": "2",
+    "teamA": "Venom",
+    "teamB": "Flashat",
+    "teamALogo": "/teams/1.jpg",
+    "teamBLogo": "/teams/2.png",
+    "time": "14:00",
+    "date": "2026-1-23"
+  },
+  {
+    "id": "3",
+    "teamA": "Madrid IT Team",
+    "teamB": "Tech Titans",
+    "teamALogo": "/teams/11.jpg",
+    "teamBLogo": "/teams/10.jpg",
+    "time": "16:00",
+    "date": "2026-1-24"
   }
 ]
