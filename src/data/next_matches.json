@@ -1,28 +1,10 @@
 [
   {
-    "id": "1",
-    "teamA": "Ummayah",
-    "teamB": "AL-Etihad",
-    "teamALogo": "/teams/5.png",
-    "teamBLogo": "/teams/6.jpg",
-    "time": "",
-    "date": ""
-  },
-  {
     "id": "2",
     "teamA": "Venom",
     "teamB": "Flashat",
     "teamALogo": "/teams/1.jpg",
     "teamBLogo": "/teams/2.png",
-    "time": "",
-    "date": ""
-  },
-  {
-    "id": "3",
-    "teamA": "Madrid IT Team",
-    "teamB": "Tech Titans",
-    "teamALogo": "/teams/11.jpg",
-    "teamBLogo": "/teams/10.jpg",
     "time": "",
     "date": ""
   }

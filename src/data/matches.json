@@ -118,5 +118,25 @@
     "date": "2026-1-20",
     "scorersA": ["عز الدين المنجد"],
     "scorersB": ["وسام عساف (3)", "حيدر موسى"]
+  },
+  {
+    "id": "13",
+    "teamA": "AL-Etihad",
+    "teamB": "Ummayah",
+    "scoreA": 3,
+    "scoreB": 6,
+    "date": "2026-1-22",
+    "scorersA": ["احمد ابراهيم (2)", "ستيفان حديد"],
+    "scorersB": ["أحمد عليان (4)", "عمر الكور" , "ابراهيم الضعيف"]
+  },
+  {
+    "id": "14",
+    "teamA": "Tech Titans",
+    "teamB": "Madrid IT Team",
+    "scoreA": 2,
+    "scoreB": 0,
+    "date": "2026-2-3",
+    "scorersA": ["معين وزير " , "حسام الشمالي"],
+    "scorersB": []
   }
 ]

@@ -150,14 +150,14 @@
     "players": [
       { "name": "عبد الله دعاس", "goals": 0, "yellowCards": 0, "redCards": 0 },
       { "name": "همام صافي", "goals": 0, "yellowCards": 0, "redCards": 0 },
-      { "name": "ابراهيم الضعيف", "goals": 0, "yellowCards": 0, "redCards": 0 },
+      { "name": "ابراهيم الضعيف", "goals": 1, "yellowCards": 0, "redCards": 0 },
       {
         "name": "محمد امين العيفر",
         "goals": 0,
         "yellowCards": 0,
         "redCards": 0
       },
-      { "name": "عمر الكور", "goals": 0, "yellowCards": 0, "redCards": 0 },
+      { "name": "عمر الكور", "goals": 1, "yellowCards": 0, "redCards": 0 },
       {
         "name": "عبد الرحمن حرفوش",
         "goals": 3,
@@ -166,7 +166,7 @@
       },
       { "name": "اسامة دعبوس", "goals": 0, "yellowCards": 0, "redCards": 0 },
       { "name": "وديع قاسم", "goals": 0, "yellowCards": 0, "redCards": 0 },
-      { "name": "أحمد عليان", "goals": 3, "yellowCards": 0, "redCards": 0 }
+      { "name": "أحمد عليان", "goals": 7, "yellowCards": 0, "redCards": 0 }
     ]
   },
   {
@@ -184,13 +184,19 @@
       { "name": "احمد بدور", "goals": 0, "yellowCards": 0, "redCards": 0 },
       { "name": "حسام الصالح", "goals": 0, "yellowCards": 0, "redCards": 0 },
       { "name": "زكريا وسوف", "goals": 0, "yellowCards": 0, "redCards": 0 },
-      { "name": "احمد ابراهيم", "goals": 0, "yellowCards": 0, "redCards": 0 },
+      { "name": "احمد ابراهيم", "goals": 2, "yellowCards": 0, "redCards": 0 },
       { "name": "محمد ابراهيم", "goals": 0, "yellowCards": 0, "redCards": 0 },
       { "name": "حسن ياسين", "goals": 1, "yellowCards": 0, "redCards": 0 },
       { "name": "ميار فندي", "goals": 2, "yellowCards": 0, "redCards": 0 },
       {
         "name": "محمد جلال قارووط",
         "goals": 0,
+        "yellowCards": 0,
+        "redCards": 0
+      },
+      {
+        "name": "ستيفان حديد",
+        "goals": 1,
         "yellowCards": 0,
         "redCards": 0
       }
@@ -288,10 +294,10 @@
       { "name": "علي شيحة", "goals": 0, "yellowCards": 0, "redCards": 0 },
       { "name": "يوشع ديوب", "goals": 0, "yellowCards": 0, "redCards": 0 },
       { "name": "محمد عزوز", "goals": 0, "yellowCards": 0, "redCards": 0 },
-      { "name": "معين وزير", "goals": 1, "yellowCards": 0, "redCards": 0 },
+      { "name": "معين وزير", "goals": 2, "yellowCards": 0, "redCards": 0 },
       {
         "name": "حسام الشمالي",
-        "goals": 1,
+        "goals": 2,
         "yellowCards": 0,
         "redCards": 0
       },
