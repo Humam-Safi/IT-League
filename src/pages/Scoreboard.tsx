@@ -185,21 +185,42 @@ const GroupTable: React.FC<{ group: Group; index: number }> = ({
                   ? "text-rose-400"
                   : "text-slate-400";
 
+            const isQualifying =
+              group.name === "A" || group.name === "B" ? idx < 2 : idx === 0;
+            const isSupplement =
+              group.name === "A" || group.name === "B"
+                ? idx === 2 || idx === 3
+                : idx === 1 || idx === 2;
+
             return (
               <motion.div
                 key={team.id}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.2 + idx * 0.1 }}
-                className={`grid grid-cols-12 gap-2 p-4 items-center border-b border-white/5 last:border-0 hover:bg-white/5 transition-colors duration-200 group text-center ${idx === 0 ? "bg-gradient-to-r from-yellow-500/10 to-transparent" : ""}`}
+                className={`grid grid-cols-12 gap-2 p-4 items-center border-b border-white/5 last:border-0 hover:bg-white/5 transition-colors duration-200 group text-center 
+                  ${idx === 0 ? "bg-gradient-to-r from-yellow-500/10 to-transparent" : ""}
+                  ${isQualifying ? "border-l-4 border-l-emerald-500/50" : ""}
+                  ${isSupplement ? "border-l-4 border-l-blue-500/50" : ""}
+                `}
               >
                 {/* Rank */}
-                <div className="col-span-1 flex justify-center">
+                <div className="col-span-1 flex justify-center flex-col items-center gap-1">
                   <span
                     className={`w-6 h-6 flex items-center justify-center rounded-full text-xs font-bold ${idx === 0 ? "bg-yellow-500 text-black shadow-lg shadow-yellow-500/20 ring-2 ring-yellow-500/30" : idx === 1 ? "bg-slate-400 text-slate-900" : idx === 2 ? "bg-orange-700 text-white" : "text-slate-600"}`}
                   >
                     {idx + 1}
                   </span>
+                  {isQualifying && (
+                    <div className="text-[8px] font-bold text-emerald-500 uppercase">
+                      Q
+                    </div>
+                  )}
+                  {isSupplement && (
+                    <div className="text-[8px] font-bold text-blue-500 uppercase">
+                      S
+                    </div>
+                  )}
                 </div>
 
                 {/* Team Info */}
