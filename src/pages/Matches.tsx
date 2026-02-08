@@ -1,9 +1,24 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import matchesData from "../data/matches.json";
-import nextMatchesData from "../data/next_matches.json";
+import matchesDataRaw from "../data/matches.json";
+import nextMatchesDataRaw from "../data/next_matches.json";
 import teamsData from "../data/teams.json"; // Need logos/names
 import { Calendar, Trophy, Clock } from "lucide-react";
+
+interface Match {
+  id: string;
+  teamA: string;
+  teamB: string;
+  date: string;
+  time?: string;
+  scoreA?: number;
+  scoreB?: number;
+  scorersA?: string[];
+  scorersB?: string[];
+}
+
+const matchesData = matchesDataRaw as Match[];
+const nextMatchesData = nextMatchesDataRaw as Match[];
 
 // Helper to get team info by name or id - the matches.json uses names like "Venom"
 const getTeam = (teamName: string) => {
@@ -47,10 +62,12 @@ const Matches: React.FC = () => {
       <div className="space-y-4">
         {activeTab === "results" ? (
           <>
-            {[...matchesData].reverse().map((match) => (
-              <MatchCard key={match.id} match={match} />
-            ))}
-            {matchesData.length === 0 && (
+            {Array.isArray(matchesData) &&
+              [...matchesData]
+                .reverse()
+                .filter((m) => m && typeof m === "object" && m.id)
+                .map((match) => <MatchCard key={match.id} match={match} />)}
+            {(!Array.isArray(matchesData) || matchesData.length === 0) && (
               <div className="text-center text-slate-500 py-10">
                 No matches found.
               </div>
@@ -58,10 +75,13 @@ const Matches: React.FC = () => {
           </>
         ) : (
           <>
-            {nextMatchesData.map((match) => (
-              <NextMatchCard key={match.id} match={match} />
-            ))}
-            {nextMatchesData.length === 0 && (
+            {Array.isArray(nextMatchesData) &&
+              nextMatchesData
+                .filter((m) => m && typeof m === "object" && m.id)
+                .map((match) => <NextMatchCard key={match.id} match={match} />)}
+            {(!Array.isArray(nextMatchesData) ||
+              nextMatchesData.filter((m) => m && typeof m === "object" && m.id)
+                .length === 0) && (
               <div className="text-center text-slate-500 py-10">
                 No upcoming matches scheduled.
               </div>
@@ -73,7 +93,7 @@ const Matches: React.FC = () => {
   );
 };
 
-const NextMatchCard: React.FC<{ match: any }> = ({ match }) => {
+const NextMatchCard: React.FC<{ match: Match }> = ({ match }) => {
   const teamA = getTeam(match.teamA);
   const teamB = getTeam(match.teamB);
 
@@ -128,7 +148,7 @@ const NextMatchCard: React.FC<{ match: any }> = ({ match }) => {
   );
 };
 
-const MatchCard: React.FC<{ match: any }> = ({ match }) => {
+const MatchCard: React.FC<{ match: Match }> = ({ match }) => {
   const teamA = getTeam(match.teamA);
   const teamB = getTeam(match.teamB);
 
